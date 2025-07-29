@@ -1,0 +1,6 @@
+# This file is used internally by FFMPEG.
+file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/1080p60/partial_movie_files/YoutubeLogo/2860881133_2076236115_703539925.mp4'
+file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/1080p60/partial_movie_files/YoutubeLogo/3305122291_2912243400_3549310560.mp4'
+file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/1080p60/partial_movie_files/YoutubeLogo/3305122291_3331625303_3549310560.mp4'
+file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/1080p60/partial_movie_files/YoutubeLogo/3305122291_2672915470_2358810818.mp4'
+file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/1080p60/partial_movie_files/YoutubeLogo/3305122291_1839128356_631829896.mp4'
