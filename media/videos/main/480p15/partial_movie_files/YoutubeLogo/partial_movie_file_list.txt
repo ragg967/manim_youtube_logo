@@ -1,3 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/480p15/partial_movie_files/YoutubeLogo/1185818338_4102492042_2605068192.mp4'
-file 'file:/home/riley/Projects/python/manim_youtube_logo/media/videos/main/480p15/partial_movie_files/YoutubeLogo/624642324_1839128356_1999173801.mp4'
