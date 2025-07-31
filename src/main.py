@@ -2,16 +2,15 @@
 """
 Main module for the application.
 """
-# ruff: noqa: F405
 
-from manim import *  # type: ignore  # noqa: F403
+from manim import *
 from manim.utils.color.XKCD import ORANGEPINK
 
 
 class YoutubeLogo(Scene):
     def construct(self):
         # Dynamic background color transition
-        self.camera.background_color = BLACK  # type: ignore
+        self.camera.background_color = BLACK
 
         # make reuseable global variables
         colors = [ORANGEPINK, RED, PINK]
