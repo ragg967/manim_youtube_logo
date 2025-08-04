@@ -69,3 +69,4 @@ config.ini
 *.log
 .env.local
 .env.production
+media/
