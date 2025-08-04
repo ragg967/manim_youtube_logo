@@ -51,27 +51,59 @@ class YoutubeLogo(Scene):
             .set_color_by_gradient(*colors)
             .shift(0.1 * DOWN + 0.1 * RIGHT)
         )
-        self.add(text_shadow)
-        self.add(youtubeName)
-        self.play(
-            DrawBorderThenFill(text_shadow),
-            DrawBorderThenFill(youtubeName),
-            run_time=2,
-        )
-        self.play(
-            text_shadow.animate.rotate(-10 * DEGREES),
-            youtubeName.animate.rotate(-10 * DEGREES),
-            run_time=0.5,
-        )
+
+        # Animated entrance with bounce
+        all_text = VGroup(text_shadow, youtubeName)
+        all_text.scale(0.1)
 
         self.play(
-            FadeOut(
-                squigglyLine1,
-                squigglyLine2,
-                text_shadow,
-                youtubeName,
-                gradient_bg,
+            all_text.animate.scale(10),
+            run_time=1.5,
+            rate_func=rate_functions.ease_out_bounce
+        )
+
+        # Rotation with overshoot and settle
+        self.play(
+            all_text.animate.rotate(-15 * DEGREES),
+            run_time=0.3,
+        )
+        self.play(
+            all_text.animate.rotate(5 * DEGREES),
+            run_time=0.2,
+        )
+
+        # Subtle floating animation
+        self.play(
+            all_text.animate.shift(0.1 * UP),
+            run_time=1,
+            rate_func=rate_functions.ease_in_out_sine
+        )
+        self.play(
+            all_text.animate.shift(0.1 * DOWN),
+            run_time=1,
+            rate_func=rate_functions.ease_in_out_sine
+        )
+
+        # Enhanced exit with particle effect simulation
+        particles = VGroup()
+        for _ in range(20):
+            particle = Dot(
+                point=youtubeName.get_center() + np.random.uniform(-1, 1, 3),
+                radius=0.05,
+                color=np.random.choice(colors)
             )
+            particles.add(particle)
+
+        self.add(particles)
+
+        # Simultaneous fade and particle dispersion
+        self.play(
+            FadeOut(squigglyLine1, squigglyLine2, all_text, gradient_bg),
+            *[particle.animate.shift(
+                np.random.uniform(-3, 3) * RIGHT +
+                np.random.uniform(-3, 3) * UP
+            ).fade(1) for particle in particles],
+            run_time=2
         )
 
         self.wait()
