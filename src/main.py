@@ -3,7 +3,7 @@
 Main module for the application.
 """
 
-from manim import *
+from manim import *  # noqa: F403
 from manim.utils.color.XKCD import ORANGEPINK
 
 
@@ -70,6 +70,7 @@ class YoutubeLogo(Scene):
                 squigglyLine2,
                 text_shadow,
                 youtubeName,
+                gradient_bg,
             )
         )
 
