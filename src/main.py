@@ -73,4 +73,4 @@ class YoutubeLogo(Scene):
             )
         )
 
-        self.wait(1)
+        self.wait()
